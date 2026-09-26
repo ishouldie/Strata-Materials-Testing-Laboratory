@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-label="Strata Materials Testing Laboratory logo">
+  <defs>
+    <linearGradient id="markGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A7FFEB"/>
+      <stop offset="100%" stop-color="#14655B"/>
+    </linearGradient>
+    <linearGradient id="markGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14655B"/>
+      <stop offset="100%" stop-color="#002B36"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Mark: geologic strata layers with a core-sample measurement line -->
+  <g transform="translate(6,6)">
+    <circle cx="62" cy="62" r="60" fill="#002B36"/>
+    <circle cx="62" cy="62" r="60" fill="none" stroke="url(#markGrad)" stroke-width="2.5"/>
+
+    <!-- stacked strata bands, widest (deepest) at bottom -->
+    <path d="M26 40 Q62 32 98 40" fill="none" stroke="#A7FFEB" stroke-width="6" stroke-linecap="round"/>
+    <path d="M22 56 Q62 46 102 56" fill="none" stroke="url(#markGrad)" stroke-width="6.5" stroke-linecap="round"/>
+    <path d="M20 74 Q62 62 104 74" fill="none" stroke="#14655B" stroke-width="7" stroke-linecap="round" opacity="0.95"/>
+    <path d="M24 92 Q62 82 100 92" fill="none" stroke="url(#markGradDark)" stroke-width="7.5" stroke-linecap="round"/>
+
+    <!-- core-sample drill line with measurement ticks, cutting through the layers -->
+    <line x1="62" y1="24" x2="62" y2="100" stroke="#A7FFEB" stroke-width="3" stroke-linecap="round"/>
+    <line x1="54" y1="24" x2="70" y2="24" stroke="#A7FFEB" stroke-width="3" stroke-linecap="round"/>
+    <line x1="54" y1="100" x2="70" y2="100" stroke="#A7FFEB" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- measurement point -->
+    <circle cx="62" cy="62" r="5" fill="#A7FFEB"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="146" y="70" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="46" fill="#FFFFFF" letter-spacing="0.5">Stra<tspan fill="#A7FFEB">ta</tspan></text>
+  <text x="148" y="98" font-family="Poppins, Arial, sans-serif" font-weight="400" font-size="16" fill="#A7FFEB" letter-spacing="2.2">MATERIALS TESTING LABORATORY</text>
+</svg>
