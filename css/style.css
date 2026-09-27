@@ -87,7 +87,7 @@ section { position: relative; }
 }
 .hero .eyebrow, .page-hero .eyebrow {
   color: var(--mint);
-  background: image(https://ph.pinterest.com/pin/1070660511445747089/);
+  background: rgba(167, 255, 235, 0.12);
   border: 1px solid rgba(167, 255, 235, 0.3);
 }
 
