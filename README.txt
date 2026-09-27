@@ -77,26 +77,6 @@ Strata-Website/
 |   `-- contact-laboratory.jpg
 `-- README.txt              (this file)
 
-How to View the Website Locally:
-----------------------------------
-1. Extract the ZIP file to any folder on your computer.
-2. Open the extracted "Strata-Website" folder.
-3. Double-click "index.html" to open it in your web browser.
-4. Use the navigation bar to browse all seven pages.
-
-No installation, server, or build step is required - it is a fully
-static website.
-
-Deploying to Netlify:
------------------------
-1. Go to https://app.netlify.com and log in / sign up.
-2. Choose "Add new site" > "Deploy manually".
-3. Drag and drop the entire "Strata-Website" folder (or a ZIP of it)
-   into the upload area.
-4. Netlify will publish the site and provide a live URL.
-Because every page is a separate static HTML file with relative links
-(css/style.css, js/script.js, images/...), no additional configuration
-is needed.
 
 Notes on Content:
 -------------------
@@ -113,6 +93,7 @@ Notes on Content:
 
 Credits:
 ---------
-Website built from scratch (all HTML, CSS, JavaScript, logo, and
-images) for the ESC 31 Computer Fundamentals and Programming
+Website built with the help of AI and some manual editing for the ESC 31 Computer Fundamentals and Programming
 Laboratory midterm project.
+
+
