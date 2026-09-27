@@ -686,6 +686,7 @@ input.invalid, select.invalid, textarea.invalid { border-color: #c0392b; }
 }
 .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 .footer-brand img { height: 34px; }
+.site-footer p { color: rgba(255, 255, 255, 0.68); }
 .footer-col h5 { color: var(--white); font-size: 15px; margin-bottom: 18px; }
 .footer-col a { display: block; color: rgba(255, 255, 255, 0.68); font-size: 14px; margin-bottom: 12px; transition: color 0.2s ease; }
 .footer-col a:hover { color: var(--mint); }
