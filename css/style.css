@@ -355,6 +355,19 @@ section { position: relative; }
 .page-hero h1 { color: var(--white); font-size: clamp(30px, 4vw, 44px); position: relative; }
 .page-hero p { color: rgba(255, 255, 255, 0.82); max-width: 640px; margin: 0 auto; position: relative; }
 
+.page-hero-photo {
+  background-image:
+    linear-gradient(180deg, rgba(0,43,54,0.88) 0%, rgba(0,43,54,0.60) 45%, rgba(0,43,54,0.92) 100%),
+    var(--hero-photo);
+  background-size: cover;
+  background-position: center;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-hero-photo::before { display: none; }
+
 /* =====================
    Cards (glass + light)
    ===================== */
