@@ -147,6 +147,14 @@ function initContactForm() {
     }
   });
 
+  function encodeForm(data) {
+    return Object.keys(data)
+      .map(function (key) { return encodeURIComponent(key) + '=' + encodeURIComponent(data[key]); })
+      .join('&');
+  }
+
+  var submitBtn = form.querySelector('button[type="submit"]');
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -164,13 +172,40 @@ function initContactForm() {
       return;
     }
 
-    // No backend / email service is configured for this student project.
-    // The form is validated client-side and a confirmation message is shown.
-    if (status) {
-      status.textContent = 'Thank you. Your inquiry has been prepared. (This is a student project demo — no email service is connected.)';
-      status.className = 'form-status success';
-    }
-    form.reset();
+    var payload = {
+      'form-name': form.getAttribute('name') || 'contact',
+      name: fields.name.el.value.trim(),
+      email: fields.email.el.value.trim(),
+      phone: (form.querySelector('#phone') || {}).value || '',
+      service: fields.service.el.value.trim(),
+      message: fields.message.el.value.trim()
+    };
+
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+    if (status) { status.textContent = ''; status.className = 'form-status'; }
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encodeForm(payload)
+    })
+      .then(function (response) {
+        if (!response.ok) throw new Error('Network response was not ok (' + response.status + ')');
+        if (status) {
+          status.textContent = 'Thank you! Your inquiry has been sent. Our team will get back to you shortly.';
+          status.className = 'form-status success';
+        }
+        form.reset();
+      })
+      .catch(function () {
+        if (status) {
+          status.textContent = 'Something went wrong sending your inquiry. Please try again, or reach us directly by phone or email.';
+          status.className = 'form-status error';
+        }
+      })
+      .finally(function () {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit Inquiry'; }
+      });
   });
 }
 

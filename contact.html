@@ -57,7 +57,7 @@
         <span class="eyebrow">Contact Information</span>
         <h2>Contact Information</h2>
         <p>Reach out to Strata using the details below, or send us an inquiry using the form.</p>
-        <img src="https://images.unsplash.com/photo-1764835711461-117d67799a7d?auto=format&fit=crop&w=2000&q=80" alt="Strata laboratory reception and testing workspace" style="border-radius:20px; margin-bottom:24px; box-shadow:var(--shadow-soft);">
+        <img src="https://images.unsplash.com/photo-1764835711461-117d67799a7d?auto=format&fit=crop&w=1600&q=80" alt="Strata laboratory reception and testing workspace" style="border-radius:20px; margin-bottom:24px; box-shadow:var(--shadow-soft);">
         <div class="contact-info-list">
           <div class="contact-info-item">
             <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h3l1.5 4.5-2 1.5a13 13 0 0 0 6.5 6.5l1.5-2L21 15v3a2 2 0 0 1-2 2C10.5 20 4 13.5 4 5a2 2 0 0 1 2-2z"/></svg></div>
@@ -77,7 +77,7 @@
             <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg></div>
             <div>
               <h4>Address</h4>
-              <p>ibabw sa Musuan Peak, Dologon, Maramag, Bukidnon, Philippines</p>
+              <p>Ibabaw sa Musuan Peak, Dologon, Maramag, Bukidnon, Philippines</p>
             </div>
           </div>
         </div>
@@ -87,7 +87,11 @@
         <span class="eyebrow">Inquiry Form</span>
         <h2 style="margin-bottom:6px;">Inquiry Form</h2>
         <p style="margin-bottom:22px; font-size:14px;">Fill out the form and we'll follow up regarding your testing needs.</p>
-        <form id="inquiry-form" novalidate>
+        <form id="inquiry-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hp-field" aria-hidden="true">
+            <label>Don&rsquo;t fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
           <div class="form-grid">
             <div class="form-group">
               <label for="name">Name</label>
@@ -170,7 +174,7 @@
           <a href="contact.html">Contact Us</a>
           <a href="tel:09051520509">0905-152-0509</a>
           <a href="mailto:info@stratamtl.ph">info@stratamtl.ph</a>
-          <a href="contact.html">ibabaw sa Musuan Peak, Maramag, Bukidnon</a>
+          <a href="contact.html">Ibabaw sa Musuan Peak, Maramag, Bukidnon</a>
         </div>
       </div>
       <div class="footer-bottom">
