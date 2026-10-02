@@ -1,0 +1,8 @@
+{
+  "name": "strata-website",
+  "private": true,
+  "description": "Strata Materials Testing Laboratory website (static site + Netlify Functions)",
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}
