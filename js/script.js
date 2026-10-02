@@ -192,10 +192,22 @@ function initContactForm() {
       .then(function (response) {
         if (!response.ok) throw new Error('Network response was not ok (' + response.status + ')');
         if (status) {
-          status.textContent = 'Thank you! Your inquiry has been sent. Our team will get back to you shortly.';
+          status.textContent = 'Thank you! Your inquiry has been sent. Check your email for a confirmation.';
           status.className = 'form-status success';
         }
         form.reset();
+
+        // Fire-and-forget: trigger the auto-reply confirmation email.
+        // Failures here are logged but never block the success message above.
+        fetch('/.netlify/functions/send-autoreply', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: payload.name,
+            email: payload.email,
+            service: payload.service
+          })
+        }).catch(function (err) { console.warn('Auto-reply email failed to send:', err); });
       })
       .catch(function () {
         if (status) {
